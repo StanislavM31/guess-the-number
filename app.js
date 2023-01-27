@@ -14,29 +14,28 @@ function guessEnumeration(x){
 
 let bingo = guessEnumeration(a);
 console.log(bingo);
-/* let x = 73; */
 
 function guess(x) {
     let min = 0;
     let max = 100;
-    let i;
-    for (i = min; i <= max; i++) {
+    for (let i = min; i <= max; ) {
 
         console.log(`min:${min} and max:${max} `);
-        if(x==i){
-            console.log(`BINGO!BINGO! Вы загадали число ${i}`);
-            return i;
-        }
-        if(x>Math.floor(max/2)){
-            min = Math.floor(max/2);
+        if(x==Math.round((max+min)/2)){
+            console.log(`!!Вы загадали число ${Math.round((max+min)/2)}`);
+            return Math.round((max+min)/2);
+        } else if(x>Math.round((max+min)/2)){
+            min = Math.round((max+min)/2);
 
-        } else{
-            max = Math.floor(max/2);
-
+        } else {
+            max = Math.round((max+min)/2);
         }
     }
 }
-let r = 28;
-let rez = guess(r);
+/* let r1 = 2;
+let r2 = 7;
+let r3 = 99; */
+
+let rez = guess(a);
 
 console.log(rez);
