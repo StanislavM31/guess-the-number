@@ -18,7 +18,7 @@ console.log(bingo);
 function guess(x) {
     let min = 0;
     let max = 100;
-    for (let i = min; i <= max; ) {
+    for (let i = min; i <= max; /* не нужен счетчик! */) {
 
         console.log(`min:${min} and max:${max} `);
         if(x==Math.round((max+min)/2)){
@@ -32,9 +32,6 @@ function guess(x) {
         }
     }
 }
-/* let r1 = 2;
-let r2 = 7;
-let r3 = 99; */
 
 let rez = guess(a);
 
